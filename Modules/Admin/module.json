@@ -1,0 +1,10 @@
+{
+    "name": "Admin",
+    "alias": "admin",
+    "description": "",
+    "priority": 0,
+    "providers": [
+        "Modules\\Admin\\Providers\\RouteServiceProvider"
+    ],
+    "files": []
+}

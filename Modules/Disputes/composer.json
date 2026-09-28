@@ -1,0 +1,10 @@
+{
+    "name": "acms/disputes",
+    "description": "Disputes module",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Disputes\\": "app/",
+            "Modules\\Disputes\\Database\\Seeders\\": "database/seeders/"
+        }
+    }
+}

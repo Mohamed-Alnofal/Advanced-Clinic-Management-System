@@ -1,0 +1,9 @@
+{
+    "name": "acms/drug",
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Drug\\": ""
+        }
+    }
+}

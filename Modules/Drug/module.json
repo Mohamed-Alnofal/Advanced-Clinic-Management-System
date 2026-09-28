@@ -1,0 +1,11 @@
+{
+    "name": "Drug",
+    "alias": "drug",
+    "description": "",
+    "priority": 0,
+    "providers": [
+        "Modules\\Drug\\Providers\\DrugServiceProvider",
+        "Modules\\Drug\\Providers\\RouteServiceProvider"
+    ],
+    "files": []
+}

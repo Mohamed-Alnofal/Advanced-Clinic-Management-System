@@ -1,0 +1,11 @@
+{
+    "name": "Audit",
+    "alias": "audit",
+    "description": "",
+    "priority": 0,
+    "providers": [
+        "Modules\\Audit\\Providers\\AuditServiceProvider",
+        "Modules\\Audit\\Providers\\RouteServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,9 @@
+{
+    "name": "acms/core",
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Core\\": ""
+        }
+    }
+}

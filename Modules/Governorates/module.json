@@ -1,0 +1,11 @@
+{
+    "name": "Governorates",
+    "alias": "governorates",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Governorates\\Providers\\GovernoratesServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,12 @@
+{
+    "name": "HomeCare",
+    "alias": "homecare",
+    "description": "Home care provider registration, specialties, and patient requests.",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\HomeCare\\Providers\\HomeCareServiceProvider",
+        "Modules\\HomeCare\\Providers\\RouteServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Pharmacist",
+    "alias": "pharmacist",
+    "description": "",
+    "priority": 0,
+    "providers": [
+       
+    ],
+    "files": []
+}

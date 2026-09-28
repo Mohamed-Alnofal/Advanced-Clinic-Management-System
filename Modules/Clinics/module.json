@@ -1,0 +1,11 @@
+{
+    "name": "Clinics",
+    "alias": "clinics",
+    "description": "",
+    "priority": 0,
+    "providers": [
+        "Modules\\Clinics\\Providers\\ClinicsServiceProvider",
+        "Modules\\Clinics\\Providers\\RouteServiceProvider"
+    ],
+    "files": []
+}

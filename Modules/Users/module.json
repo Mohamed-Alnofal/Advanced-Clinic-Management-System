@@ -1,0 +1,10 @@
+{
+    "name": "Users",
+    "alias": "users",
+    "description": "",
+    "priority": 0,
+    "providers": [
+     
+    ],
+    "files": []
+}

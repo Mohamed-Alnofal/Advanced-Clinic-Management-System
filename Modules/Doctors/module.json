@@ -1,0 +1,12 @@
+{
+    "name": "Doctors",
+    "alias": "doctors",
+    "description": "",
+    "priority": 0,
+    "providers": [
+        "Modules\\Doctors\\Providers\\DoctorServiceProvider",
+        "Modules\\Doctors\\Providers\\RouteServiceProvider",
+        "Modules\\Doctors\\Providers\\EventServiceProvider"
+    ],
+    "files": []
+}

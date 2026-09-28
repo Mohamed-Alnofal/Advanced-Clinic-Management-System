@@ -1,0 +1,11 @@
+{
+    "name": "Ambulance",
+    "alias": "ambulance",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Ambulance\\Providers\\AmbulanceServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,9 @@
+{
+    "name": "acms/doctor",
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Doctor\\": ""
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "acms/users",
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Users\\": ""
+        }
+    }
+}

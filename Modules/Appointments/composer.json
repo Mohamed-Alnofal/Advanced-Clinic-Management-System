@@ -1,0 +1,9 @@
+{
+    "name": "acms/appointments",
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Appointments\\": ""
+        }
+    }
+}

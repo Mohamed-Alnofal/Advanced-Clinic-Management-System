@@ -1,0 +1,9 @@
+{
+    "name": "acms/search",
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Search\\": ""
+        }
+    }
+}

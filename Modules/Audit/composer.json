@@ -1,0 +1,9 @@
+{
+    "name": "acms/audit",
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Audit\\": ""
+        }
+    }
+}

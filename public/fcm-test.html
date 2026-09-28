@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>FCM Test - نظام إدارة العيادة</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; text-align: center; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 5px; }
+        #token { word-break: break-all; margin-top: 20px; color: green; font-weight: bold; }
+    </style>
+</head>
+
+<body>
+
+<h2>مستخرج ومختبر توكن FCM</h2>
+
+<button id="btn">توليد التوكن واختبار الإشعارات</button>
+
+<p id="token"></p>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-messaging.js";
+
+// إعدادات مشروع Firebase الخاص بك
+const firebaseConfig = {
+    apiKey: "AIzaSyAhacXlr6OwNYVwHKxI0QyPu1gGUi9C25g",
+    authDomain: "clinicmanagementsystem-6a7f2.firebaseapp.com",
+    projectId: "clinicmanagementsystem-6a7f2",
+    messagingSenderId: "862133670748",
+    appId: "1:862133670748:web:08c8afd9c5ae78b233a799",
+};
+
+const app = initializeApp(firebaseConfig);
+const messaging = getMessaging(app);
+
+// 👇 التعديل الأول: الاستماع للإشعارات عندما تكون الصفحة مفتوحة ومفعلة (Foreground)
+onMessage(messaging, (payload) => {
+    console.log("تم استقبال إشعار في الواجهة (Foreground):", payload);
+    
+    // استخراج النصوص بمرونة سواء أرسلت كـ notification أو data
+    const title = payload.notification?.title || payload.data?.title || "تنبيه جديد";
+    const body = payload.notification?.body || payload.data?.body || "";
+
+    // إجبار المتصفح على إظهار النافذة المنبثقة للإشعار
+    new Notification(title, {
+        body: body,
+        icon: "/icon.png" // يمكنك وضع رابط أيقونة نظامك هنا
+    });
+});
+
+async function initFCM() {
+    // طلب صلاحية الإشعارات من المستخدم
+    const permission = await Notification.requestPermission();
+
+    if (permission !== "granted") {
+        alert("تم رفض صلاحية الإشعارات من قبل المتصفح!");
+        return;
+    }
+
+    // تسجيل الـ Service Worker
+    const registration = await navigator.serviceWorker.register(
+        "/firebase-messaging-sw.js"
+    );
+
+    // جلب التوكن الفريد للجهاز
+    const token = await getToken(messaging, {
+        vapidKey: "BK6IUpMAy9DoGqRHGtDzkcw6baNTLVE2KnIPbKFp1lPggQ3KFV_7DjnX8ZGsRDr4U30Jlyh6_lXEFli2rYx8X3U",
+        serviceWorkerRegistration: registration
+    });
+
+    console.log("FCM TOKEN:", token);
+    document.getElementById("token").innerText = token;
+
+    // إرسال التوكن وحفظه في قاعدة بيانات Laravel
+    await fetch("/api/fcm/store", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '' 
+        },
+        body: JSON.stringify({ token })
+    });
+}
+
+document.getElementById("btn").addEventListener("click", initFCM);
+
+</script>
+
+</body>
+</html>

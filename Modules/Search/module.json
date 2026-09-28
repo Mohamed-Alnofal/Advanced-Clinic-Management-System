@@ -1,0 +1,11 @@
+{
+    "name": "Search",
+    "alias": "search",
+    "description": "",
+    "priority": 0,
+    "providers": [
+        "Modules\\Search\\Providers\\SearchServiceProvider",
+        "Modules\\Search\\Providers\\RouteServiceProvider"
+    ],
+    "files": []
+}

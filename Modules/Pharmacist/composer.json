@@ -1,0 +1,9 @@
+{
+    "name": "acms/pharmacist",
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Pharmacist\\": ""
+        }
+    }
+}

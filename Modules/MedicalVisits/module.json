@@ -1,0 +1,11 @@
+{
+    "name": "MedicalVisits",
+    "alias": "medicalvisits",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\MedicalVisits\\Providers\\MedicalVisitsServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,11 @@
+{
+    "name": "WalletTransaction",
+    "alias": "wallettransaction",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\WalletTransaction\\Providers\\WalletTransactionServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,32 @@
+<?php
+
+namespace Tests\Feature\Api;
+
+use Tests\TestCase;
+
+class {{ class }} extends TestCase
+{
+    public function test_{{ snakeMethod }}_happy_path(): void
+    {
+        $user = $this->createPatient();
+
+        $this->authenticateAs($user)
+            ->{{ httpMethod }}Json('{{ uri }}', {{ payload }})
+            ->assertOk();
+    }
+
+    public function test_{{ snakeMethod }}_requires_authentication(): void
+    {
+        $this->{{ httpMethod }}Json('{{ uri }}', {{ payload }})
+            ->assertUnauthorized();
+    }
+
+    public function test_{{ snakeMethod }}_validates_input(): void
+    {
+        $user = $this->createPatient();
+
+        $this->authenticateAs($user)
+            ->{{ httpMethod }}Json('{{ uri }}', [])
+            ->assertUnprocessable();
+    }
+}

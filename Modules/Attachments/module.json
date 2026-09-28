@@ -1,0 +1,11 @@
+{
+    "name": "Attachments",
+    "alias": "attachments",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Attachments\\Providers\\AttachmentsServiceProvider"
+    ],
+    "files": []
+}

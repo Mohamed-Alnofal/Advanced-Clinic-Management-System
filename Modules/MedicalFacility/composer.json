@@ -1,0 +1,9 @@
+{
+    "name": "acms/medicalfacility",
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "Modules\\MedicalFacility\\": ""
+        }
+    }
+}

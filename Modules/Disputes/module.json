@@ -1,0 +1,11 @@
+{
+    "name": "Disputes",
+    "alias": "disputes",
+    "description": "",
+    "priority": 0,
+    "providers": [
+        "Modules\\Disputes\\Providers\\DisputesServiceProvider",
+        "Modules\\Disputes\\Providers\\RouteServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,9 @@
+{
+    "name": "acms/auth",
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Auth\\": ""
+        }
+    }
+}

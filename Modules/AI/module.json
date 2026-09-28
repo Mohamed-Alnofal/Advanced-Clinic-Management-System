@@ -1,0 +1,10 @@
+{
+    "name": "AI",
+    "alias": "ai",
+    "description": "Medical AI chatbot and emergency first-aid assistant (Groq)",
+    "priority": 0,
+    "providers": [
+        "Modules\\AI\\Providers\\AIServiceProvider"
+    ],
+    "files": []
+}
